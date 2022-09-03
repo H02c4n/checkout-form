@@ -1,0 +1,23 @@
+{
+  "name": "checkout-form",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "scss": "node-sass -w scss -o public/css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/H02c4n/checkout-form.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/H02c4n/checkout-form/issues"
+  },
+  "homepage": "https://github.com/H02c4n/checkout-form#readme",
+  "dependencies": {
+    "node-sass": "^7.0.1"
+  }
+}

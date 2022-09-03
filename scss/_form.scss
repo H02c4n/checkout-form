@@ -1,0 +1,82 @@
+@import 'variables';
+
+
+.form-wrap{
+    width: 50%;
+    text-align: left;
+
+    h2.cI{
+        margin-bottom:1rem;
+    }
+
+    h2.sA{
+        margin-top: 3rem 0 2rem;
+    }
+
+    .form-control{
+        margin-bottom: .5rem;
+       div{
+        display: flex;
+        align-items: center;
+        height: 30px;
+        width: 100%;
+        margin-top: .5rem;
+        border: 2px solid lightgray;
+        border-radius: 4px;
+        padding-left: .5rem;
+
+        i{
+            opacity: $iconOpac;
+        }
+
+        input, select {
+            width: 100%;
+            height: 25px;
+            border: none;
+            outline: none;
+            padding-left: .5rem;
+        }
+       }
+
+    }
+
+    .country-postcode{
+        display: flex;
+        justify-content: space-between;
+    }
+    .select{
+        width: 30%;
+    }
+    .post-code{
+        width: 65%;
+    }
+
+    label{
+        opacity: .7;
+    }
+
+    .continue{
+        display: flex;
+        justify-content: flex-end;
+        button{
+            padding: 1rem;
+        color: white;
+        background-color: $orangeColor;
+        border-radius: $bRadius;
+        border: none;
+        }
+        
+    }
+}
+
+@media screen and (max-width:880px) {
+
+    .form-wrap{
+        width: 60%;
+    }
+
+    button[type="submit"]{
+        margin-bottom: 4rem;
+    }
+    
+}

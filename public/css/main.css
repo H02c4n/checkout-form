@@ -1,0 +1,155 @@
+.form-wrap {
+  width: 50%;
+  text-align: left; }
+  .form-wrap h2.cI {
+    margin-bottom: 1rem; }
+  .form-wrap h2.sA {
+    margin-top: 3rem 0 2rem; }
+  .form-wrap .form-control {
+    margin-bottom: .5rem; }
+    .form-wrap .form-control div {
+      display: flex;
+      align-items: center;
+      height: 30px;
+      width: 100%;
+      margin-top: .5rem;
+      border: 2px solid lightgray;
+      border-radius: 4px;
+      padding-left: .5rem; }
+      .form-wrap .form-control div i {
+        opacity: 0.5; }
+      .form-wrap .form-control div input, .form-wrap .form-control div select {
+        width: 100%;
+        height: 25px;
+        border: none;
+        outline: none;
+        padding-left: .5rem; }
+  .form-wrap .country-postcode {
+    display: flex;
+    justify-content: space-between; }
+  .form-wrap .select {
+    width: 30%; }
+  .form-wrap .post-code {
+    width: 65%; }
+  .form-wrap label {
+    opacity: .7; }
+  .form-wrap .continue {
+    display: flex;
+    justify-content: flex-end; }
+    .form-wrap .continue button {
+      padding: 1rem;
+      color: white;
+      background-color: orange;
+      border-radius: 10px;
+      border: none; }
+
+@media screen and (max-width: 880px) {
+  .form-wrap {
+    width: 60%; }
+  button[type="submit"] {
+    margin-bottom: 4rem; } }
+
+.summary {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 40%;
+  background-color: #eeeeee;
+  border-radius: 10px;
+  padding: 1rem; }
+  .summary ul li {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 2rem; }
+    .summary ul li .img-container {
+      width: 40%;
+      margin-right: 1.5rem; }
+      .summary ul li .img-container .image {
+        width: 100%;
+        height: 100%;
+        min-width: 100px;
+        border-radius: 10px; }
+    .summary ul li .p-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between; }
+      .summary ul li .p-info:first-child {
+        font-family: montserra;
+        font-size: 1.4rem;
+        font-weight: 400; }
+      .summary ul li .p-info .new-price, .summary ul li .p-info .currency {
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: orange; }
+      .summary ul li .p-info .old-price {
+        color: #333;
+        display: inline-block;
+        text-decoration: line-through;
+        padding-left: .5rem;
+        transform: rotate(5deg); }
+      .summary ul li .p-info .buttons-container {
+        max-width: 100px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        border: 1px solid #333;
+        border-radius: 5px; }
+        .summary ul li .p-info .buttons-container button {
+          background-color: lightgrey;
+          padding: .3rem;
+          font-size: 1.2rem;
+          font-weight: 700;
+          border-radius: 5px;
+          border: none;
+          margin: .2rem; }
+          .summary ul li .p-info .buttons-container button:hover {
+            outline: 1px solid gray;
+            color: #fff;
+            cursor: pointer; }
+  .summary .checkout {
+    margin-top: 2rem; }
+    .summary .checkout li {
+      display: flex;
+      justify-content: space-between;
+      border-top: 2px solid lightgrey; }
+
+@media screen and (max-width: 880px) {
+  .summary {
+    width: 60%; } }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+@font-face {
+  font-family: mont;
+  src: url(../public/fonts/Montserrat-Regular.ttf); }
+
+body {
+  font-family: mont; }
+
+.container {
+  width: 80%;
+  margin: 4rem auto;
+  text-align: center; }
+  .container h1 {
+    display: inline-block;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    border-bottom-left-radius: 50px;
+    border-top-right-radius: 50px;
+    padding: 1rem;
+    margin-bottom: 2rem; }
+  .container .wrapper {
+    display: flex;
+    justify-content: space-around; }
+
+@media screen and (max-width: 880px) {
+  .container {
+    width: 100%;
+    margin: 4rem auto; }
+    .container .wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center; } }
