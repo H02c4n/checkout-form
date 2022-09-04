@@ -1,6 +1,7 @@
 @import 'variables';
 @import 'form' ;
 @import 'summary';
+@import 'responsive';
 
 *{
     margin: 0;
@@ -35,18 +36,5 @@ body{
     .wrapper{
         display: flex;
         justify-content: space-around;
-    }
-}
-
-@media screen and (max-width:880px) {
-    .container{
-        width: 100%;
-        margin: 4rem auto;
-    
-        .wrapper{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
     }
 }
