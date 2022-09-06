@@ -1,0 +1,38 @@
+
+.navbar{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: $orangeColor;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+
+    .center{
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 40px;
+    }
+
+    .logo{
+        padding-left: 1rem;
+        padding-top: .3rem;
+    }
+
+    .cart{
+        position: relative;
+        padding-right: 1rem;
+        padding-top: .3rem;
+
+        .badge{
+            width: 20px;
+            height: 20px;
+            font-size: 1rem;
+            background-color: black;
+            color: white;
+            border-radius: 50%;
+            position: absolute;
+            top: 1px;
+            right: 8px;
+        }
+    }
+}

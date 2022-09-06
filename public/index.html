@@ -1,136 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
-    <link rel="stylesheet" href="./css/main.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
     <title>Checkout Form</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="container">
-        <h1>Checkout Form</h1>
-        <div class="wrapper">
-            <div class="form-wrap">
-                <form action="">
-                    <div class="contact-info">
-                        <h2 class="cI">Contact Information</h2>
-                        <div class="form-control">
-                            <label for="email">Email</label>
-                            <div><i class="fa-solid fa-envelope"></i><input type="email" id="email" name="email"
-                                    placeholder="Enter Your Email..">
-                            </div>
-                        </div>
-                        <div class="form-control">
-                            <label for="phone">Phone</label>
-                            <div><i class="fa-solid fa-phone"></i><input type="number" id="phone" name="phone"
-                                    placeholder="Enter Your Phone..">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="shipping-address">
-                        <h2 class="sA">Shipping address</h2>
-                        <div class="form-control">
-                            <label for="fname">Full Name</label>
-                            <div><i class="fa-solid fa-user"></i><input type="text" id="fname" name="fname"
-                                    placeholder="Enter Your Name..">
-                            </div>
-                        </div>
-                        <div class="form-control">
-                            <label for="address">Address</label>
-                            <div><i class="fa-solid fa-home"></i><input type="text" id="address" name="address"
-                                    placeholder="Enter Your Address..">
-                            </div>
-                        </div>
-                        <div class="form-control">
-                            <label for="city">City</label>
-                            <div><i class="fa-solid fa-city"></i><input type="text" id="city" name="city"
-                                    placeholder="Enter Your City..">
-                            </div>
-                        </div>
-                        <div class="country-postcode">
-                            <div class="form-control select">
-                                <p>Country</p>
-                                <div>
-                                    <i class="fa-solid fa-earth"></i>
-                                    <select name="country" id="country">
-
-                                        <option disabled value="">Choose a country</option>
-                                        <option value="turkey">Turkey</option>
-                                        <option value="sweden">Sweden</option>
-                                        <option value="norway">Norway</option>
-                                        <option value="finland">Finland</option>
-                                        <option value="denmark">Denmark</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="form-control post-code">
-                                <label for="city">Post Code</label>
-                                <div><i class="fa-solid fa-envelopes-bulk"></i><input type="number" id="postcode"
-                                        name="postcode" placeholder="Enter Your Postal Code..">
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="form-control">
-                            <input type="checkbox" name="infoForNext" id="infoForNext"><label for="infoForNext">See
-                                this information next time.</label>
-                        </div>
-                    </div>
-                    <div class="continue">
-                        <button type="submit" value="continue">Continue</button>
-                    </div>
-                </form>
-            </div>
-            <div class="summary">
-                <div class="product-list">
-                    <ul>
-                        <li>
-                            <div class="img-container">
-                                <img class="image" src="./img/photo1.png" alt="backbag">
-                            </div>
-                            <div class="p-info">
-                                <div>
-                                    <h3>Vintage Backbag</h3>
-                                    <p><span class="currency">$</span><span class="new-price">54.99</span><span
-                                            class="old-price">$94.99</span> </p>
-                                </div>
-                                <div class="buttons-container">
-                                    <button>-</button><span>1</span><button>+</button>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="img-container">
-                                <img class="image" src="./img/photo2.png" alt="shoes">
-                            </div>
-                            <div class="p-info">
-                                <div>
-                                    <h3>Levi Shoes</h3>
-                                    <p><span class="currency">$</span><span class="new-price">74.99</span><span
-                                            class="old-price">$124.99</span> </p>
-                                </div>
-                                <div class="buttons-container">
-                                    <button>-</button><span>1</span><button>+</button>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="checkout">
-                    <ul>
-                        <li><span>Shipping</span><span>$19</span></li>
-                        <li><span>Total</span><span>$148</span></li>
-                    </ul>
-                </div>
-            </div>
+      <nav class="navbar">
+        <div class="logo">
+          <i class="fa-solid fa-anchor fa-2x"></i>
         </div>
+        <div class="center">Checkout Form</div>
+        <div class="cart">
+          <i class="fa-solid fa-cart-shopping fa-2x"
+            ><span class="badge">1</span></i
+          >
+        </div>
+      </nav>
+
+      <div class="wrapper">
+        <div class="form-wrap">
+          <form action="">
+            <div class="contact-info">
+              <h2 class="cI">Contact Information</h2>
+              <div class="form-control">
+                <label for="email">Email</label>
+                <div>
+                  <i class="fa-solid fa-envelope"></i
+                  ><input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter Your Email.."
+                  />
+                </div>
+              </div>
+              <div class="form-control">
+                <label for="phone">Phone</label>
+                <div>
+                  <i class="fa-solid fa-phone"></i
+                  ><input
+                    type="number"
+                    id="phone"
+                    name="phone"
+                    placeholder="Enter Your Phone.."
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="shipping-address">
+              <h2 class="sA">Shipping address</h2>
+              <div class="form-control">
+                <label for="fname">Full Name</label>
+                <div>
+                  <i class="fa-solid fa-user"></i
+                  ><input
+                    type="text"
+                    id="fname"
+                    name="fname"
+                    placeholder="Enter Your Name.."
+                  />
+                </div>
+              </div>
+              <div class="form-control">
+                <label for="address">Address</label>
+                <div>
+                  <i class="fa-solid fa-home"></i
+                  ><input
+                    type="text"
+                    id="address"
+                    name="address"
+                    placeholder="Enter Your Address.."
+                  />
+                </div>
+              </div>
+              <div class="form-control">
+                <label for="city">City</label>
+                <div>
+                  <i class="fa-solid fa-city"></i
+                  ><input
+                    type="text"
+                    id="city"
+                    name="city"
+                    placeholder="Enter Your City.."
+                  />
+                </div>
+              </div>
+              <div class="country-postcode">
+                <div class="form-control select">
+                  <p>Country</p>
+                  <div>
+                    <i class="fa-solid fa-earth"></i>
+                    <select name="country" id="country">
+                      <option disabled value="">Choose a country</option>
+                      <option value="turkey">Turkey</option>
+                      <option value="sweden">Sweden</option>
+                      <option value="norway">Norway</option>
+                      <option value="finland">Finland</option>
+                      <option value="denmark">Denmark</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-control post-code">
+                  <label for="city">Post Code</label>
+                  <div>
+                    <i class="fa-solid fa-envelopes-bulk"></i
+                    ><input
+                      type="number"
+                      id="postcode"
+                      name="postcode"
+                      placeholder="Enter Your Postal Code.."
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="form-control">
+                <input
+                  type="checkbox"
+                  name="infoForNext"
+                  id="infoForNext"
+                /><label for="infoForNext"
+                  >See this information next time.</label
+                >
+              </div>
+            </div>
+            <div class="continue">
+              <button type="submit" value="continue">Continue</button>
+            </div>
+          </form>
+        </div>
+        <div class="summary">
+          <div class="product-list">
+            <ul>
+              <li>
+                <div class="img-container">
+                  <img class="image" src="./img/photo1.png" alt="backbag" />
+                </div>
+                <div class="p-info">
+                  <div>
+                    <h3>Vintage Backbag</h3>
+                    <p>
+                      <span class="currency">$</span
+                      ><span class="new-price">54.99</span
+                      ><span class="old-price">$94.99</span>
+                    </p>
+                  </div>
+                  <div class="buttons-container">
+                    <button>-</button><span>1</span><button>+</button>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="img-container">
+                  <img class="image" src="./img/photo2.png" alt="shoes" />
+                </div>
+                <div class="p-info">
+                  <div>
+                    <h3>Levi Shoes</h3>
+                    <p>
+                      <span class="currency">$</span
+                      ><span class="new-price">74.99</span
+                      ><span class="old-price">$124.99</span>
+                    </p>
+                  </div>
+                  <div class="buttons-container">
+                    <button>-</button><span>1</span><button>+</button>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="checkout">
+            <ul>
+              <li><span>Shipping</span><span>$19</span></li>
+              <li><span>Total</span><span>$148</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
-
-
-</body>
-
+  </body>
 </html>

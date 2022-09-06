@@ -118,6 +118,35 @@
   .summary {
     width: 60%; } }
 
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: orange;
+  margin-bottom: 1rem;
+  border-radius: 10px; }
+  .navbar .center {
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 40px; }
+  .navbar .logo {
+    padding-left: 1rem;
+    padding-top: .3rem; }
+  .navbar .cart {
+    position: relative;
+    padding-right: 1rem;
+    padding-top: .3rem; }
+    .navbar .cart .badge {
+      width: 20px;
+      height: 20px;
+      font-size: 1rem;
+      background-color: black;
+      color: white;
+      border-radius: 50%;
+      position: absolute;
+      top: 1px;
+      right: 8px; }
+
 @media screen and (max-width: 880px) {
   .container {
     width: 100%;
