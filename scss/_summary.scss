@@ -83,14 +83,12 @@
             display: flex;
             justify-content: space-between;
             border-top: 2px solid lightgrey;
+
+            .free{
+                font-size: 11px;
+            }
         }
     }
 }
 
-@media screen and (max-width:880px) {
 
-    .summary{
-        width: 60%;
-    }
-    
-}

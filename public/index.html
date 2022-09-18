@@ -19,14 +19,35 @@
           <i class="fa-solid fa-anchor fa-2x"></i>
         </div>
         <div class="center">Checkout Form</div>
+
+        <!--Cart start-->
+
         <div class="cart">
           <i class="fa-solid fa-cart-shopping fa-2x"
             ><span class="badge">1</span></i
           >
         </div>
+        <!--Cart finished-->
       </nav>
 
       <div class="wrapper">
+        <!--Summary-->
+        <div class="summary">
+          <div class="product-list">
+            <ul id="products-list">
+              <!--List items will come from app.js-->
+            </ul>
+          </div>
+          <div class="checkout">
+            <ul>
+              <li><span>Shipping</span><span>$19</span></li>
+              <li><span>Total</span><span>$148</span></li>
+            </ul>
+          </div>
+        </div>
+        <!--Summary End-->
+
+        <!--Contact Form-->
         <div class="form-wrap">
           <form action="">
             <div class="contact-info">
@@ -137,55 +158,9 @@
             </div>
           </form>
         </div>
-        <div class="summary">
-          <div class="product-list">
-            <ul>
-              <li>
-                <div class="img-container">
-                  <img class="image" src="./img/photo1.png" alt="backbag" />
-                </div>
-                <div class="p-info">
-                  <div>
-                    <h3>Vintage Backbag</h3>
-                    <p>
-                      <span class="currency">$</span
-                      ><span class="new-price">54.99</span
-                      ><span class="old-price">$94.99</span>
-                    </p>
-                  </div>
-                  <div class="buttons-container">
-                    <button>-</button><span>1</span><button>+</button>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="img-container">
-                  <img class="image" src="./img/photo2.png" alt="shoes" />
-                </div>
-                <div class="p-info">
-                  <div>
-                    <h3>Levi Shoes</h3>
-                    <p>
-                      <span class="currency">$</span
-                      ><span class="new-price">74.99</span
-                      ><span class="old-price">$124.99</span>
-                    </p>
-                  </div>
-                  <div class="buttons-container">
-                    <button>-</button><span>1</span><button>+</button>
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </div>
-          <div class="checkout">
-            <ul>
-              <li><span>Shipping</span><span>$19</span></li>
-              <li><span>Total</span><span>$148</span></li>
-            </ul>
-          </div>
-        </div>
+        <!--Contact Form End-->
       </div>
     </div>
+    <script src="./js/app.js"></script>
   </body>
 </html>

@@ -45,7 +45,7 @@
 
 @media screen and (max-width: 880px) {
   .form-wrap {
-    width: 60%; }
+    width: 80%; }
   button[type="submit"] {
     margin-bottom: 4rem; } }
 
@@ -113,10 +113,8 @@
       display: flex;
       justify-content: space-between;
       border-top: 2px solid lightgrey; }
-
-@media screen and (max-width: 880px) {
-  .summary {
-    width: 60%; } }
+      .summary .checkout li .free {
+        font-size: 11px; }
 
 .navbar {
   width: 100%;
@@ -154,7 +152,10 @@
     .container .wrapper {
       display: flex;
       flex-direction: column;
-      align-items: center; } }
+      align-items: center; }
+      .container .wrapper .summary {
+        margin-bottom: 2rem;
+        width: 100%; } }
 
 * {
   margin: 0;
@@ -164,9 +165,6 @@
 @font-face {
   font-family: mont;
   src: url(../public/fonts/Montserrat-Regular.ttf); }
-
-body {
-  font-family: mont; }
 
 .container {
   width: 80%;
