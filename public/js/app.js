@@ -177,7 +177,7 @@ const App = (function (ProductCtrl, UICtrl) {
   const incQuantity = function (e) {
     const key = e.target.dataset.key;
     ProductCtrl.increase(key);
-    //UICtrl.updateQuantity(key);
+    UICtrl.updateQuantity(key);
     const updateTotal = ProductCtrl.getTotal();
     UICtrl.updateTotalPrice(updateTotal);
 
@@ -187,7 +187,7 @@ const App = (function (ProductCtrl, UICtrl) {
   const decQuantity = function (e) {
     const key = e.target.dataset.key;
     ProductCtrl.decrease(key);
-    //UICtrl.updateQuantity(key);
+    UICtrl.updateQuantity(key);
     const updateTotal = ProductCtrl.getTotal();
     UICtrl.updateTotalPrice(updateTotal);
     //console.log(e.target.dataset.key);
