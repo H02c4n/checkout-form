@@ -60,7 +60,7 @@ const ProductController = (function () {
     },
     increase: function (key) {
       data.products.forEach((product) => {
-        if (product.id == key) {
+        if (product.id == key && data.products[key].quantity >= 0) {
           data.products[key].quantity++;
           //console.log(data.products[key].quantity);
         }
@@ -69,8 +69,10 @@ const ProductController = (function () {
     decrease: function (key) {
       data.products.forEach((product) => {
         if (product.id == key) {
-          data.products[key].quantity--;
-          //console.log(data.products[key].quantity);
+          if (data.products[key].quantity > 0) {
+            data.products[key].quantity--;
+            //console.log(data.products[key].quantity);
+          }
         }
       });
     },
@@ -84,6 +86,7 @@ const UIController = (function () {
     checkout: ".checkout",
     minusBtns: ".minus",
     plusBtns: ".plus",
+    btnContainer: ".buttons-container",
   };
 
   return {
@@ -107,7 +110,7 @@ const UIController = (function () {
                     </p>
                   </div>
                   <div class="buttons-container">
-                    <button data-key="${p.id}" class="minus">-</button><span>1</span><button data-key="${p.id}" class="plus">+</button>
+                    <button data-key="${p.id}" class="minus">-</button><span>${p.quantity}</span><button data-key="${p.id}" class="plus">+</button>
                   </div>
                 </div>
               </li>
@@ -115,6 +118,9 @@ const UIController = (function () {
         document.querySelector(Selectors.productsList).innerHTML += item;
       });
     },
+    // inc: function () {
+    //   console.log("here");
+    // },
     showTotal: function (totalPrice) {
       let html = `
         <ul>
@@ -133,6 +139,21 @@ const UIController = (function () {
         `;
       document.querySelector(Selectors.checkout).innerHTML = html;
     },
+
+    updateQuantity: function (key) {
+      const products = ProductController.getProducts();
+      products.forEach((p) => {
+        if (key == p.id) {
+          console.log(`key: ${key}, id: ${p.id},Qnty: ${p.quantity},`);
+          let item = `
+
+                    <button data-key="${p.id}" class="minus">-</button><span>${p.quantity}</span><button data-key="${p.id}" class="plus">+</button>
+
+              `;
+          document.querySelector(Selectors.btnContainer).innerHTML = item;
+        }
+      });
+    },
   };
 })();
 
@@ -140,7 +161,7 @@ const UIController = (function () {
 const App = (function (ProductCtrl, UICtrl) {
   const UISelectors = UICtrl.getSelectors();
   const totalPrice = ProductCtrl.getTotal();
-  console.log(totalPrice);
+
   //All EventListener Loading....
   const LoadEventListeners = function () {
     //!Increase Quantity
@@ -154,7 +175,9 @@ const App = (function (ProductCtrl, UICtrl) {
   };
 
   const incQuantity = function (e) {
-    ProductCtrl.increase(e.target.dataset.key);
+    const key = e.target.dataset.key;
+    ProductCtrl.increase(key);
+    //UICtrl.updateQuantity(key);
     const updateTotal = ProductCtrl.getTotal();
     UICtrl.updateTotalPrice(updateTotal);
 
@@ -162,7 +185,9 @@ const App = (function (ProductCtrl, UICtrl) {
   };
 
   const decQuantity = function (e) {
-    ProductCtrl.decrease(e.target.dataset.key);
+    const key = e.target.dataset.key;
+    ProductCtrl.decrease(key);
+    //UICtrl.updateQuantity(key);
     const updateTotal = ProductCtrl.getTotal();
     UICtrl.updateTotalPrice(updateTotal);
     //console.log(e.target.dataset.key);
