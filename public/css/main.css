@@ -115,6 +115,9 @@
       border-top: 2px solid lightgrey; }
       .summary .checkout li .free {
         font-size: 11px; }
+    .summary .checkout .delete {
+      background-color: red !important;
+      text-decoration-line: line-through !important; }
 
 .navbar {
   width: 100%;
