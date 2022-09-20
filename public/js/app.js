@@ -69,9 +69,9 @@ const ProductController = (function () {
       return data.shipping;
     },
 
-    getTotalProductQuantity: function () {
-      return data.totalProductQuantity;
-    },
+    // getTotalProductQuantity: function () {
+    //   return data.totalProductQuantity;
+    // },
 
     updateShipping: function () {
       if (data.totalPrice >= 300) {
@@ -221,13 +221,13 @@ const UIController = (function () {
         e.target.nextElementSibling.textContent--;
       }
     },
-    updateCart: function (totalProductQuantity) {
-      let item = `
-          <i class="fa-solid fa-cart-shopping fa-2x">
-          <span class="badge">${totalProductQuantity}</span>
-          </i>`;
-      document.querySelector(Selectors.cart).innerHTML = item;
-    },
+    // updateCart: function (totalProductQuantity) {
+    //   let item = `
+    //       <i class="fa-solid fa-cart-shopping fa-2x">
+    //       <span class="badge">${totalProductQuantity}</span>
+    //       </i>`;
+    //   document.querySelector(Selectors.cart).innerHTML = item;
+    // },
   };
 })();
 
