@@ -252,23 +252,23 @@ const App = (function (ProductCtrl, UICtrl) {
   const incQuantity = function (e) {
     const key = e.target.dataset.key;
     const products = ProductCtrl.getProducts();
-    const totalProductQuantity = ProductCtrl.getTotalProductQuantity();
+    //const totalProductQuantity = ProductCtrl.getTotalProductQuantity();
     ProductCtrl.increase(key);
     UICtrl.increaseQuantity(e);
     const updateTotal = ProductCtrl.getTotal();
     UICtrl.updateTotalPriceAndShipping(updateTotal, updateShipping);
-    UICtrl.updateCart(totalProductQuantity);
+    //UICtrl.updateCart(totalProductQuantity);
   };
 
   const decQuantity = function (e) {
     const key = e.target.dataset.key;
     const products = ProductCtrl.getProducts();
-    const totalProductQuantity = ProductCtrl.getTotalProductQuantity();
+    //const totalProductQuantity = ProductCtrl.getTotalProductQuantity();
     ProductCtrl.decrease(key);
     UICtrl.decreaseQuantity(e, products);
     const updateTotal = ProductCtrl.getTotal();
     UICtrl.updateTotalPriceAndShipping(updateTotal, updateShipping);
-    UICtrl.updateCart(totalProductQuantity);
+    //UICtrl.updateCart(totalProductQuantity);
   };
 
   //   console.log(totalPrice);
