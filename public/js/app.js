@@ -41,12 +41,12 @@ const ProductController = (function () {
     ],
     shipping: 19,
     totalPrice: 0,
-    totalProductQuantity: function () {
-      this.products.reduce(acc, p.quantity, i, function () {
-        acc + p.quantity, 0;
-        return acc;
-      });
-    },
+    // totalProductQuantity: function () {
+    //   this.products.reduce(acc, p.quantity, i, function () {
+    //     acc + p.quantity, 0;
+    //     return acc;
+    //   });
+    // },
   };
 
   return {
